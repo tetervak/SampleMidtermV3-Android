@@ -19,7 +19,11 @@ class OutputFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val binding = FragmentOutputBinding.inflate(inflater, container, false)
-        binding.breedInfo = safeArgs.breedInfo
+        with(safeArgs.breedInfo){
+            binding.breedOutput.text = breedName
+            binding.hairOutput.text = hairLength
+        }
+
         binding.backButton.setOnClickListener {
             findNavController().navigate(R.id.action_output_to_input)
         }
