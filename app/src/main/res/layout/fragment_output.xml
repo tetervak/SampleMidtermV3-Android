@@ -4,8 +4,8 @@
 
     <data>
         <variable
-            name="breedInfo"
-            type="sheridan.tetervak.samplemidtermv3.model.BreedInfo" />
+            name="viewModel"
+            type="sheridan.tetervak.samplemidtermv3.ui.BreedViewModel" />
     </data>
 
     <LinearLayout
@@ -44,7 +44,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/gap0"
-                    android:text="@{breedInfo.breedName}"
+                    android:text="@{viewModel.breedInfoData.breedName}"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                     tools:text="Domestic" />
             </TableRow>
@@ -70,7 +70,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/gap0"
-                    android:text="@{breedInfo.hairLength}"
+                    android:text="@{viewModel.breedInfoData.hairLength}"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                     tools:ignore="RtlHardcoded"
                     tools:text="Short Hair" />
