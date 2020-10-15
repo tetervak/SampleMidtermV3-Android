@@ -21,7 +21,10 @@ class OutputFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val binding = FragmentOutputBinding.inflate(inflater, container, false)
-        binding.breedInfo = arguments?.getSerializable(BREED_INFO) as BreedInfo
+        val breedInfo = arguments?.getSerializable(BREED_INFO) as BreedInfo
+        binding.breedOutput.text = breedInfo.breedName
+        binding.hairOutput.text = breedInfo.hairLength
+
         binding.backButton.setOnClickListener {
             findNavController().navigate(R.id.action_output_to_input)
         }
