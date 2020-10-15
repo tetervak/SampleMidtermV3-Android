@@ -9,7 +9,6 @@ import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import sheridan.tetervak.samplemidtermv3.R
 import sheridan.tetervak.samplemidtermv3.databinding.FragmentOutputBinding
-import sheridan.tetervak.samplemidtermv3.model.BreedInfo
 
 class OutputFragment : Fragment() {
 
@@ -21,8 +20,10 @@ class OutputFragment : Fragment() {
     ): View? {
         val binding = FragmentOutputBinding.inflate(inflater, container, false)
 
-        binding.lifecycleOwner = viewLifecycleOwner
-        binding.viewModel = viewModel
+        viewModel.breedInfoData.observe(viewLifecycleOwner){
+            binding.breedOutput.text = it.breedName
+            binding.hairOutput.text = it.hairLength
+        }
 
         binding.backButton.setOnClickListener {
             findNavController().navigate(R.id.action_output_to_input)
