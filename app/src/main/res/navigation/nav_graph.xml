@@ -24,4 +24,9 @@
             app:popUpTo="@id/input_fragment"
             app:popUpToInclusive="true" />
     </fragment>
+    <dialog
+        android:id="@+id/about_dialog"
+        android:name="sheridan.tetervak.samplemidtermv3.ui.AboutDialog"
+        android:label="AboutDialog" />
+    <action android:id="@+id/action_global_to_about" app:destination="@id/about_dialog" />
 </navigation>

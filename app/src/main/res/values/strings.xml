@@ -1,6 +1,12 @@
 <resources>
     <string name="app_name">Sample Midterm V3</string>
-    <string name="action_settings">Settings</string>
+
+    <!-- menu items -->
+    <string name="action_about">About</string>
+
+    <!-- about dialog -->
+    <string name="about">About</string>
+    <string name="author">Alex Tetervak, Sheridan College, 2020</string>
 
     <!-- input/output labels -->
     <string name="breed_label">Breed</string>
