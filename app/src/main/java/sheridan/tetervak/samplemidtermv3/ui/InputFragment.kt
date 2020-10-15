@@ -10,7 +10,6 @@ import androidx.navigation.fragment.findNavController
 import sheridan.tetervak.samplemidtermv3.R
 import sheridan.tetervak.samplemidtermv3.databinding.FragmentInputBinding
 import sheridan.tetervak.samplemidtermv3.model.BreedInfo
-import sheridan.tetervak.samplemidtermv3.ui.OutputFragment.Companion.BREED_INFO
 
 class InputFragment : Fragment() {
 
@@ -35,9 +34,8 @@ class InputFragment : Fragment() {
             val hairList = resources.getStringArray(R.array.hair_list)
             val hairLength = hairList[binding.hairInput.selectedItemPosition]
             val breedInfo = BreedInfo(breedName, hairLength)
-            val arguments = Bundle()
-            arguments.putSerializable(BREED_INFO, breedInfo)
-            findNavController().navigate(R.id.action_input_to_output, arguments)
+            val action = InputFragmentDirections.actionInputToOutput(breedInfo)
+            findNavController().navigate(action)
         }
     }
 

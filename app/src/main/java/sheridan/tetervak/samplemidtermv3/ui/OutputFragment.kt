@@ -6,22 +6,20 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import sheridan.tetervak.samplemidtermv3.R
 import sheridan.tetervak.samplemidtermv3.databinding.FragmentOutputBinding
-import sheridan.tetervak.samplemidtermv3.model.BreedInfo
 
 class OutputFragment : Fragment() {
 
-    companion object{
-        const val BREED_INFO = "breed_info"
-    }
+    private val safeArgs: OutputFragmentArgs by navArgs()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         val binding = FragmentOutputBinding.inflate(inflater, container, false)
-        binding.breedInfo = arguments?.getSerializable(BREED_INFO) as BreedInfo
+        binding.breedInfo = safeArgs.breedInfo
         binding.backButton.setOnClickListener {
             findNavController().navigate(R.id.action_output_to_input)
         }
