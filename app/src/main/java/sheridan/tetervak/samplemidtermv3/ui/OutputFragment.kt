@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
-import sheridan.tetervak.samplemidtermv3.R
 import sheridan.tetervak.samplemidtermv3.databinding.FragmentOutputBinding
 
 class OutputFragment : Fragment() {
@@ -23,11 +22,13 @@ class OutputFragment : Fragment() {
             binding.breedOutput.text = breedName
             binding.hairOutput.text = hairLength
         }
-
-        binding.backButton.setOnClickListener {
-            findNavController().navigate(R.id.action_output_to_input)
-        }
+        binding.backButton.setOnClickListener { showInput() }
         return binding.root
+    }
+
+    private fun showInput() {
+        val action = OutputFragmentDirections.actionOutputToInput()
+        findNavController().navigate(action)
     }
 
 }
