@@ -20,10 +20,13 @@ class OutputFragment : Fragment() {
     ): View? {
         val binding = FragmentOutputBinding.inflate(inflater, container, false)
         binding.breedInfo = safeArgs.breedInfo
-        binding.backButton.setOnClickListener {
-            findNavController().navigate(R.id.action_output_to_input)
-        }
+        binding.backButton.setOnClickListener { showInput() }
         return binding.root
+    }
+
+    private fun showInput() {
+        val action = OutputFragmentDirections.actionOutputToInput()
+        findNavController().navigate(action)
     }
 
 }
