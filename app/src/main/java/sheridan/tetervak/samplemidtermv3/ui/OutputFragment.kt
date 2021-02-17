@@ -16,7 +16,7 @@ class OutputFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         val binding = FragmentOutputBinding.inflate(inflater, container, false)
         with(safeArgs.breedInfo){
             binding.breedOutput.text = breedName
