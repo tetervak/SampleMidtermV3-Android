@@ -7,7 +7,7 @@
     <fragment
         android:id="@+id/input_fragment"
         android:name="sheridan.tetervak.samplemidtermv3.ui.InputFragment"
-        android:label="Input"
+        android:label="@string/input"
         tools:layout="@layout/fragment_input" >
         <action
             android:id="@+id/action_input_to_output"
@@ -16,8 +16,8 @@
     <fragment
         android:id="@+id/output_fragment"
         android:name="sheridan.tetervak.samplemidtermv3.ui.OutputFragment"
-        android:label="fragment_output"
-        tools:layout="@layout/fragment_output" >
+        android:label="@string/output"
+        tools:layout="@layout/fragment_output">
         <action
             android:id="@+id/action_output_to_input"
             app:destination="@id/input_fragment"
