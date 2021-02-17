@@ -19,7 +19,7 @@ class OutputFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         val binding = FragmentOutputBinding.inflate(inflater, container, false)
         val breedInfo = arguments?.getSerializable(BREED_INFO) as BreedInfo
         binding.breedOutput.text = breedInfo.breedName
