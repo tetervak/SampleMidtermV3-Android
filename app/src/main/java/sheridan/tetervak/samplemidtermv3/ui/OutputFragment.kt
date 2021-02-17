@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import sheridan.tetervak.samplemidtermv3.R
 import sheridan.tetervak.samplemidtermv3.databinding.FragmentOutputBinding
-import sheridan.tetervak.samplemidtermv3.model.BreedInfo
 
 class OutputFragment : Fragment() {
 
@@ -19,7 +18,7 @@ class OutputFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         val binding = FragmentOutputBinding.inflate(inflater, container, false)
         binding.breedInfo = arguments?.getSerializable(BREED_INFO) as BreedInfo
         binding.backButton.setOnClickListener {
