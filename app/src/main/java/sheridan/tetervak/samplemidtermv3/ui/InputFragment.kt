@@ -16,13 +16,14 @@ class InputFragment : Fragment() {
 
     private val viewModel : BreedViewModel by activityViewModels()
 
-    private lateinit var binding: FragmentInputBinding
+    private var _binding: FragmentInputBinding? = null
+    private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentInputBinding.inflate(inflater, container, false)
+        _binding = FragmentInputBinding.inflate(inflater, container, false)
         binding.submitButton.setOnClickListener { showOutput() }
         return binding.root
     }
@@ -42,5 +43,8 @@ class InputFragment : Fragment() {
         }
     }
 
-
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
 }
