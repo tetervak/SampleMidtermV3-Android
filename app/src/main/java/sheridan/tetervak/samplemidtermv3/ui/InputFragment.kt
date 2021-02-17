@@ -21,7 +21,7 @@ class InputFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentInputBinding.inflate(inflater, container, false)
         binding.submitButton.setOnClickListener { showOutput() }
         return binding.root
