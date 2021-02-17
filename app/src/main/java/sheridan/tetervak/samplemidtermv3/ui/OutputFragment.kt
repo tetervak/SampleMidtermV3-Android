@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import sheridan.tetervak.samplemidtermv3.R
 import sheridan.tetervak.samplemidtermv3.databinding.FragmentOutputBinding
+import sheridan.tetervak.samplemidtermv3.model.BreedInfo
 
 class OutputFragment : Fragment() {
 

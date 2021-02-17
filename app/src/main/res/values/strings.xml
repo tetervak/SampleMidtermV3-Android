@@ -25,4 +25,8 @@
     <!-- validation error -->
     <string name="required">required</string>
 
+    <!-- the fragment labels -->
+    <string name="output">Output</string>
+    <string name="input">Input</string>
+
 </resources>
