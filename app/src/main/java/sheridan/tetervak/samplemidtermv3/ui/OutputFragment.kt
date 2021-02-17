@@ -16,7 +16,7 @@ class OutputFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         val binding = FragmentOutputBinding.inflate(inflater, container, false)
         binding.breedInfo = safeArgs.breedInfo
         binding.backButton.setOnClickListener { showInput() }
